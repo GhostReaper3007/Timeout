@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "Timeout",
+    "slug": "timeout",
+    "scheme": "timeout",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": { "image": "./assets/splash-icon.png", "resizeMode": "contain", "backgroundColor": "#FFF7EE" },
+    "ios": {
+      "bundleIdentifier": "com.timeoutapp.focus",
+      "supportsTablet": false,
+      "infoPlist": { "ITSAppUsesNonExemptEncryption": false }
+    },
+    "android": {
+      "package": "com.timeoutapp.focus",
+      "permissions": ["android.permission.NFC"],
+      "adaptiveIcon": {
+        "backgroundColor": "#FF6A4D",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "plugins": [
+      ["expo-build-properties", { "ios": { "deploymentTarget": "16.4" } }],
+      ["react-native-nfc-manager", { "nfcPermission": "Timeout reads your Timeout tag to lock and unlock apps.", "includeNdefEntitlement": true }],
+      ["react-native-device-activity", { "appleTeamId": "YOUR_APPLE_TEAM_ID", "appGroup": "group.com.timeoutapp.focus" }]
+    ]
+  }
+}
